@@ -104,7 +104,7 @@ export default function Counsel({ data, market, variant }: { data: MarketData, m
       <section className="sec sec-tint"><div className="shell">
         <div className="atty">
           <div className="portrait">
-            <ClientImage src="/mumin.png" alt="Mu'min F. Islam, attorney at ACE Law, LP" width="480" height="600" loading="lazy" decoding="async" fallbackMode="portrait" />
+            <ClientImage src="/mum-pics/DSC_3484_2.jpg" alt="Mu'min F. Islam, attorney at ACE Law, LP" width="480" height="600" loading="lazy" decoding="async" fallbackMode="portrait" />
           </div>
           <div>
             <span className="eyebrow" style={{color: 'var(--gold-ink)', display: 'block', marginBottom: '12px'}}>Who you&rsquo;ll be working with</span>

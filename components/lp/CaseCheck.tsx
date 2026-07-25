@@ -30,7 +30,7 @@ export default function CaseCheck({ data, market, variant }: { data: MarketData,
 
         <div className="reviewer">
           <div className="rv-photo">
-            <ClientImage src="/mumin.png" alt="Mu'min F. Islam" width="112" height="112" loading="lazy" decoding="async" fallbackMode="portrait" />
+            <ClientImage src="/mum-pics/DSC_3484_2.jpg" alt="Mu'min F. Islam" width="112" height="112" loading="lazy" decoding="async" fallbackMode="portrait" />
           </div>
           <div className="rv-txt"><b>Mu&rsquo;min F. Islam</b><span>Attorney at ACE Law, LP. He reviews every case check personally.</span></div>
         </div>
