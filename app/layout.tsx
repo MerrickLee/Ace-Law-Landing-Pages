@@ -17,10 +17,10 @@ export const metadata: Metadata = {
     follow: false,
   },
   openGraph: {
-    images: [{ url: '/social-image-1200×675px.png' }],
+    images: [{ url: '/social-3.png' }],
   },
   twitter: {
-    images: ['/social-image-1200×675px.png'],
+    images: ['/social-3.png'],
   }
 };
 
