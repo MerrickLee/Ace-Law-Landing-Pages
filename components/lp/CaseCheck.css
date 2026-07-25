@@ -1,0 +1,190 @@
+
+/* ============================================================
+DIRECTION 3 — "THE 60-SECOND CASE CHECK"
+Mobile-first. The page IS the tool.
+
+>>> SHARED BRAND TOKENS — identical block in ace-lp-01-counsel.html
+>>> Edit here, paste into the other file, and both pages move together.
+============================================================ */
+
+
+/* page-local aliases so the rules below stay readable */
+.variant-casecheck {
+--canvas:var(--paper-2);
+--card:var(--paper);
+--mid:var(--slate);
+--accent:var(--ink);
+--accent-dk:var(--ink-2);
+--accent-soft:#E8EEF6;
+--amber:#B4740F;
+--amber-soft:#FBF0DC;
+}
+.variant-casecheck * {box-sizing:border-box}
+.variant-casecheck {-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:76px;scroll-padding-bottom:110px}
+.variant-casecheck {margin:0;background:var(--canvas);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.variant-casecheck a, .variant-casecheck button, .variant-casecheck summary, .variant-casecheck label, .variant-casecheck input {-webkit-tap-highlight-color:rgba(200,155,63,.2);touch-action:manipulation}
+.variant-casecheck #tool {scroll-margin-top:76px}
+.variant-casecheck .shell {max-width:var(--shell);margin:0 auto;padding:0 20px}
+.variant-casecheck h1, .variant-casecheck h2, .variant-casecheck h3 {font-family:var(--display);font-weight:700;line-height:1.1;margin:0;letter-spacing:-.025em}
+.variant-casecheck .eyebrow {font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--gold-ink)}
+.variant-casecheck :focus-visible {outline:3px solid var(--gold);outline-offset:3px;border-radius:6px}
+.variant-casecheck a {color:var(--accent)}
+
+.variant-casecheck header {background:var(--canvas);position:sticky;top:0;z-index:40;border-bottom:1px solid var(--line)}
+.variant-casecheck header .shell {display:flex;align-items:center;justify-content:space-between;padding:13px 20px;gap:14px}
+.variant-casecheck .brand {display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:800;font-size:20px;letter-spacing:-.02em}
+.variant-casecheck .spade {width:29px;height:29px;border-radius:8px;background:var(--ink);color:var(--gold);display:grid;place-items:center;font-size:14px;flex:none}
+.variant-casecheck .logo {height:40px;width:auto;display:block}
+.variant-casecheck .brand-fallback {display:none;align-items:center;gap:10px;font-family:var(--display);font-weight:600;font-size:21px;letter-spacing:.02em}
+.variant-casecheck .hcall {display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-weight:700;font-size:15px;color:var(--ink);text-decoration:none;background:#fff;border:1px solid var(--line);padding:9px 15px;border-radius:99px}
+
+/* ---------- hero + tool ---------- */
+.variant-casecheck .top {padding:44px 0 60px;text-align:center}
+.variant-casecheck .top h1 {font-size:clamp(32px,5.6vw,50px);max-width:15ch;margin:14px auto 16px}
+.variant-casecheck .top h1 u {text-decoration:none;background:linear-gradient(transparent 62%,rgba(200,155,63,.38) 62%)}
+.variant-casecheck .top .lede {color:var(--mid);font-size:18.5px;max-width:40ch;margin:0 auto 12px}
+.variant-casecheck .trustline {display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:22px}
+.variant-casecheck .pill {background:#fff;border:1px solid var(--line);border-radius:99px;padding:7px 14px;font-size:13.5px;font-weight:500;color:var(--mid)}
+.variant-casecheck .pill b {color:var(--ink);font-weight:600}
+
+.variant-casecheck .tool {color:var(--ink);max-width:620px;margin:34px auto 0;background:var(--card);border-radius:20px;border:1px solid var(--line);box-shadow:0 20px 44px -26px rgba(12,26,21,.4);text-align:left;overflow:hidden}
+.variant-casecheck .prog {height:5px;background:var(--accent-soft)}
+.variant-casecheck .prog i {display:block;height:100%;background:var(--gold);width:20%;transition:width .35s ease}
+.variant-casecheck .tool-in {padding:28px 26px 26px}
+.variant-casecheck .qcount {font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--mid);margin-bottom:12px}
+.variant-casecheck .q {font-family:var(--display);font-size:26px;font-weight:700;letter-spacing:-.025em;line-height:1.15;margin:0 0 20px}
+.variant-casecheck .opts {display:grid;gap:9px}
+.variant-casecheck .opt {display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;text-align:left;background:#fff;border:1.5px solid var(--line);border-radius:13px;padding:15px 17px;font:inherit;font-size:16.5px;font-weight:500;cursor:pointer;color:var(--ink);transition:border-color .14s,background .14s,transform .1s}
+.variant-casecheck .opt:hover {border-color:var(--accent);background:var(--accent-soft)}
+.variant-casecheck .opt:active {transform:scale(.99)}
+.variant-casecheck .opt .arw {color:var(--accent);font-size:17px;opacity:0;transition:opacity .14s}
+.variant-casecheck .opt:hover .arw {opacity:1}
+.variant-casecheck .helper {font-size:13.5px;color:var(--mid);margin:16px 0 0}
+.variant-casecheck .backlink {background:none;border:0;font:inherit;font-size:14px;color:var(--mid);text-decoration:underline;cursor:pointer;padding:16px 0 0}
+
+.variant-casecheck label.f {display:block;margin-bottom:13px}
+.variant-casecheck label.f span {display:block;font-size:13px;font-weight:600;margin-bottom:6px}
+.variant-casecheck input[type=text], .variant-casecheck input[type=tel], .variant-casecheck input[type=email], .variant-casecheck input[type=date] {width:100%;border:1.5px solid var(--line);border-radius:12px;padding:13px 15px;font:inherit;font-size:16px;background:#fff;color:var(--ink)}
+.variant-casecheck input:focus {outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(15,30,54,.13)}
+.variant-casecheck .two {display:grid;grid-template-columns:1fr 1fr;gap:11px}
+.variant-casecheck .go {width:100%;border:0;background:var(--accent);color:#fff;font:inherit;font-family:var(--display);font-weight:700;font-size:18.5px;padding:17px;border-radius:13px;cursor:pointer;letter-spacing:-.01em}
+.variant-casecheck .go:hover {background:var(--accent-dk)}
+.variant-casecheck .consent {display:flex;gap:9px;align-items:flex-start;font-size:11.5px;color:var(--mid);line-height:1.5;margin:8px 0 15px}
+.variant-casecheck .consent input {margin-top:2px;width:16px;height:16px;flex:none;accent-color:var(--accent)}
+.variant-casecheck .hide {display:none}
+
+/* result panel — the signature */
+.variant-casecheck .readout {background:var(--accent-soft);border:1px solid #C8D6E8;border-radius:14px;padding:18px 19px;margin-bottom:20px}
+.variant-casecheck .readout .lab {font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-dk);margin-bottom:8px}
+.variant-casecheck .clock {display:flex;align-items:baseline;gap:9px;margin-bottom:8px}
+.variant-casecheck .clock .num {font-family:var(--mono);font-weight:700;font-size:38px;letter-spacing:-.03em;color:var(--ink);line-height:1}
+.variant-casecheck .clock .unit {font-size:15px;font-weight:600;color:var(--mid)}
+.variant-casecheck .readout p {margin:0;font-size:13.5px;color:var(--mid);line-height:1.5}
+.variant-casecheck .readout.warn {background:var(--amber-soft);border-color:#EBD3A6}
+.variant-casecheck .readout.warn .lab {color:var(--amber)}
+.variant-casecheck .signals {list-style:none;margin:0 0 20px;padding:0;display:grid;gap:10px}
+.variant-casecheck .signals li {display:flex;gap:11px;font-size:15.5px;line-height:1.4;align-items:flex-start}
+.variant-casecheck .dot {width:20px;height:20px;border-radius:50%;background:rgba(14,124,80,.12);color:var(--go);display:grid;place-items:center;font-size:11px;flex:none;margin-top:2px;font-weight:700}
+
+/* ---------- testimonials ---------- */
+.variant-casecheck .testi {display:grid;grid-template-columns:1fr 1.1fr;gap:48px;align-items:center}
+.variant-casecheck .testi .sec-head {margin-bottom:0}
+.variant-casecheck .testi-disc {font-size:12.5px;color:var(--slate);font-style:italic;margin:16px 0 0;max-width:46ch}
+.variant-casecheck .vids {display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.variant-casecheck .vid {margin:0;position:relative;aspect-ratio:4/5;background:var(--ink);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.variant-casecheck .vid video {width:100%;height:100%;object-fit:cover;display:block;background:var(--ink)}
+.variant-casecheck .vid figcaption {position:absolute;left:0;right:0;bottom:0;padding:22px 12px 9px;background:linear-gradient(transparent,rgba(0,0,0,.72));color:#fff;font-size:12px;font-family:var(--mono);letter-spacing:.06em;pointer-events:none}
+
+/* ---------- sections ---------- */
+/* reviewer strip — puts a face on the promise the tool already makes */
+.variant-casecheck .reviewer {max-width:620px;margin:18px auto 0;display:flex;align-items:center;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-align:left}
+.variant-casecheck .rv-photo {position:relative;width:56px;height:56px;flex:none;border-radius:50%;overflow:hidden;background:var(--ink)}
+.variant-casecheck .rv-photo img {width:100%;height:100%;object-fit:cover;object-position:50% 15%;display:block}
+.variant-casecheck .rv-photo.noimg::after {content:"MI";position:absolute;inset:0;display:grid;place-items:center;color:var(--gold);font-family:var(--mono);font-weight:700;font-size:16px}
+.variant-casecheck .rv-txt b {display:block;font-size:15.5px;color:var(--ink);line-height:1.3}
+.variant-casecheck .rv-txt span {display:block;font-size:13.5px;color:var(--mid);line-height:1.4;margin-top:2px}
+.variant-casecheck .sec {padding:66px 0}
+.variant-casecheck .sec-white {background:#fff}
+.variant-casecheck .sec-ink {background:var(--ink);color:#DCE6E1}
+.variant-casecheck .sec-ink h2 {color:#fff}
+.variant-casecheck .sec-ink .eyebrow {color:var(--gold)}
+.variant-casecheck .head {max-width:620px;margin:0 auto 36px;text-align:center}
+.variant-casecheck .head h2 {font-size:clamp(27px,3.6vw,38px);margin:12px 0}
+.variant-casecheck .head p {color:var(--mid);margin:0}
+.variant-casecheck .sec-ink .head p {color:#C6D0DE}
+
+.variant-casecheck .g3 {display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.variant-casecheck .tile {background:var(--canvas);border-radius:16px;padding:24px 22px}
+.variant-casecheck .sec-white .tile {background:var(--canvas)}
+.variant-casecheck .sec-ink .tile {background:var(--ink-2)}
+.variant-casecheck .tile .ic {width:38px;height:38px;border-radius:11px;background:var(--accent);color:#fff;display:grid;place-items:center;font-size:16px;margin-bottom:15px;font-weight:700}
+.variant-casecheck .tile h3 {font-size:19px;margin-bottom:8px}
+.variant-casecheck .tile p {margin:0;font-size:15.5px;color:var(--mid)}
+.variant-casecheck .sec-ink .tile p {color:#C6D0DE}
+
+.variant-casecheck .numbers {display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.variant-casecheck .stat {background:var(--ink-2);border-radius:16px;padding:22px 20px}
+.variant-casecheck .stat .v {font-family:var(--mono);font-weight:700;font-size:27px;color:var(--gold);letter-spacing:-.03em;margin-bottom:7px}
+.variant-casecheck .stat p {margin:0;font-size:14px;color:#C6D0DE;line-height:1.4}
+
+.variant-casecheck .faq {max-width:720px;margin:0 auto}
+.variant-casecheck details {background:#fff;border-radius:14px;margin-bottom:10px;border:1px solid var(--line)}
+.variant-casecheck summary {cursor:pointer;list-style:none;padding:18px 46px 18px 20px;font-family:var(--display);font-weight:700;font-size:18px;letter-spacing:-.02em;position:relative}
+.variant-casecheck summary::-webkit-details-marker {display:none}
+.variant-casecheck summary::after {content:"+";position:absolute;right:20px;top:15px;color:var(--gold-ink);font-family:var(--body);font-size:23px;font-weight:400}
+.variant-casecheck details[open] summary::after {content:"\2013"}
+.variant-casecheck details p {margin:0;padding:0 20px 20px;color:var(--mid);font-size:15.5px}
+
+.variant-casecheck .close {text-align:center;padding:70px 0}
+.variant-casecheck .close h2 {font-size:clamp(28px,4vw,42px);max-width:16ch;margin:0 auto 14px}
+.variant-casecheck .close p {color:var(--mid);max-width:42ch;margin:0 auto 28px}
+.variant-casecheck .cbtn {display:inline-flex;align-items:center;gap:10px;background:var(--ink);color:#fff;text-decoration:none;font-weight:700;font-size:17.5px;padding:17px 30px;border-radius:14px}
+
+.variant-casecheck footer {background:var(--ink);color:#8496AE;font-size:13px;padding:40px 0 100px}
+.variant-casecheck footer .shell {display:grid;gap:16px}
+.variant-casecheck .offs {display:flex;gap:44px;flex-wrap:wrap}
+.variant-casecheck .offs b {color:#fff;display:block;margin-bottom:3px}
+.variant-casecheck .offs a {display:inline-block;color:var(--gold);font-family:var(--mono);font-size:15px;font-weight:700;padding:11px 0;min-height:44px;line-height:22px;text-decoration:none;border-bottom:1px solid rgba(95,207,165,.4)}
+.variant-casecheck .legal {border-top:1px solid rgba(255,255,255,.1);padding-top:16px;font-size:12px;line-height:1.7}
+.variant-casecheck .legal a {color:#B9C6D8;display:inline-block;padding:12px 2px;min-height:44px;line-height:20px}
+
+.variant-casecheck .stickybar {display:none;position:fixed;left:0;right:0;bottom:0;z-index:60;background:#fff;border-top:1px solid var(--line);padding:10px 12px calc(10px + env(safe-area-inset-bottom));gap:9px;box-shadow:0 -8px 24px -14px rgba(12,26,21,.4)}
+.variant-casecheck .stickybar a {flex:1;text-align:center;text-decoration:none;padding:14px 8px;border-radius:12px;font-weight:700;font-size:16px}
+.variant-casecheck .sb1 {background:var(--gold);color:#20180A}
+.variant-casecheck .sb2 {background:var(--canvas);color:var(--ink)}
+
+@media(max-width:860px){
+.variant-casecheck {scroll-padding-top:88px}
+.variant-casecheck #tool {scroll-margin-top:88px}
+.variant-casecheck .g3 {grid-template-columns:1fr}
+.variant-casecheck .testi {grid-template-columns:1fr;gap:26px}
+.variant-casecheck .vids {grid-template-columns:1fr;gap:14px;max-width:330px;margin:0 auto}
+.variant-casecheck .numbers {grid-template-columns:1fr 1fr}
+.variant-casecheck .stickybar {display:flex}
+.variant-casecheck .top {padding:30px 0 42px}
+.variant-casecheck .sec {padding:48px 0}
+.variant-casecheck .tool {margin-top:24px;border-radius:16px}
+.variant-casecheck .tool-in {padding:24px 20px 96px;min-height:430px}
+.variant-casecheck .logo {height:32px}
+.variant-casecheck .hcall {font-size:0;gap:0;padding:11px 13px;min-height:44px}
+.variant-casecheck .hcall::before {content:"\260E Call";font-size:14.5px;font-family:var(--body);font-weight:700}
+.variant-casecheck footer {padding-bottom:120px}
+}
+@media(max-width:430px){
+.variant-casecheck .top h1 {font-size:30px}
+.variant-casecheck .top .lede {font-size:16.5px}
+.variant-casecheck .q {font-size:23px}
+.variant-casecheck .opt {padding:14px 15px;font-size:16px}
+.variant-casecheck .tool-in {padding:22px 17px 96px}
+.variant-casecheck .clock .num {font-size:32px}
+.variant-casecheck .stat .v {font-size:23px}
+.variant-casecheck .stickybar a {font-size:15px;padding:15px 6px}
+.variant-casecheck .offs {gap:24px}
+}
+@media(max-width:400px){
+.variant-casecheck .two {grid-template-columns:1fr;gap:0}
+.variant-casecheck .numbers {grid-template-columns:1fr}
+.variant-casecheck .shell {padding:0 16px}
+.variant-casecheck .pill {font-size:12.5px;padding:6px 12px}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}

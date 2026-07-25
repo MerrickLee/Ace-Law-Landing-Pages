@@ -1,0 +1,216 @@
+
+/* ============================================================
+DIRECTION 1 — "COUNSEL"
+Swap these six tokens to match the real brand and the whole
+page follows. Nothing else is hard-coded.
+============================================================ */
+
+.variant-counsel * {box-sizing:border-box}
+.variant-counsel {-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:96px;scroll-padding-bottom:110px}
+.variant-counsel {margin:0;font-family:var(--body);color:var(--ink);background:var(--paper);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.variant-counsel a, .variant-counsel button, .variant-counsel summary, .variant-counsel label, .variant-counsel input, .variant-counsel textarea {-webkit-tap-highlight-color:rgba(200,155,63,.2);touch-action:manipulation}
+.variant-counsel #leadform {scroll-margin-top:96px}
+.variant-counsel img {max-width:100%;display:block}
+.variant-counsel a {color:inherit}
+.variant-counsel .shell {max-width:var(--shell);margin:0 auto;padding:0 22px}
+.variant-counsel h1, .variant-counsel h2, .variant-counsel h3 {font-family:var(--display);font-weight:500;letter-spacing:-.015em;line-height:1.12;margin:0}
+.variant-counsel .eyebrow {font-family:var(--mono);font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+.variant-counsel :focus-visible {outline:3px solid var(--gold);outline-offset:2px;border-radius:4px}
+
+/* ---------- top strip ---------- */
+.variant-counsel .strip {background:var(--ink);color:#C6D0DE;font-size:13px;letter-spacing:.02em}
+.variant-counsel .strip .shell {display:flex;gap:26px;justify-content:center;padding:9px 22px;flex-wrap:wrap}
+.variant-counsel .strip b {color:var(--gold);font-weight:600}
+
+/* ---------- header ---------- */
+.variant-counsel header {background:var(--paper);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:40}
+.variant-counsel header .shell {display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:14px;padding-bottom:14px}
+.variant-counsel .brand {display:flex;align-items:center;gap:11px;font-family:var(--display);font-size:23px;letter-spacing:.02em}
+.variant-counsel .mark {width:34px;height:44px;border:1.5px solid var(--gold);border-radius:5px;display:grid;place-items:center;color:var(--gold);font-size:17px;flex:none}
+.variant-counsel .brand small {display:block;font-family:var(--mono);font-size:9px;letter-spacing:.16em;color:var(--slate);text-transform:uppercase}
+.variant-counsel .logo {height:46px;width:auto;display:block}
+.variant-counsel .brand-fallback {display:none;align-items:center;gap:11px;font-family:var(--display);font-size:23px;letter-spacing:.02em}
+.variant-counsel .callbtn {display:inline-flex;align-items:center;gap:9px;background:var(--ink);color:#fff;text-decoration:none;padding:11px 19px;border-radius:var(--r);font-weight:600;font-size:15.5px;white-space:nowrap;min-height:44px}
+.variant-counsel .callbtn b {font-weight:600}
+.variant-counsel input[type=radio], .variant-counsel input[type=checkbox] {font-size:16px}
+.variant-counsel .callbtn span {font-family:var(--mono);letter-spacing:-.01em}
+.variant-counsel .callbtn:hover {background:var(--ink-2)}
+
+/* ---------- hero ---------- */
+.variant-counsel .hero {background:var(--ink);color:#fff;position:relative;overflow:hidden}
+.variant-counsel .hero::after {content:"";position:absolute;inset:0;background:
+radial-gradient(760px 380px at 12% 0%, rgba(200,155,63,.16), transparent 68%);pointer-events:none}
+.variant-counsel .hero .shell {position:relative;z-index:2;display:grid;grid-template-columns:1.06fr .94fr;gap:52px;padding-top:56px;padding-bottom:60px;align-items:start}
+.variant-counsel .hero .eyebrow {color:var(--gold);margin-bottom:16px;display:block}
+.variant-counsel .hero h1 {font-size:clamp(34px,4.3vw,55px);color:#fff;margin-bottom:18px}
+.variant-counsel .hero h1 em {font-style:normal;position:relative;white-space:nowrap}
+.variant-counsel .hero h1 em::after {content:"";position:absolute;left:0;right:0;bottom:.06em;height:3px;background:var(--gold)}
+.variant-counsel .lede {font-size:18.5px;color:#C6D0DE;max-width:33em;margin:0 0 26px}
+.variant-counsel .checks {list-style:none;margin:0 0 28px;padding:0;display:grid;gap:12px}
+.variant-counsel .checks li {display:flex;gap:12px;font-size:16px;color:#E4EAF2;line-height:1.45}
+.variant-counsel .tick {width:21px;height:21px;border-radius:50%;background:rgba(200,155,63,.16);color:var(--gold);display:grid;place-items:center;font-size:12px;flex:none;margin-top:2px}
+.variant-counsel .badges {display:flex;gap:10px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.14);padding-top:22px}
+.variant-counsel .badge {font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#9FB0C6;border:1px solid rgba(255,255,255,.18);padding:7px 11px;border-radius:5px}
+
+/* ---------- form card ---------- */
+.variant-counsel .card {color:var(--ink);background:var(--paper);border-radius:14px;box-shadow:0 26px 60px -20px rgba(0,0,0,.55);overflow:hidden;position:sticky;top:96px}
+.variant-counsel .card-top {background:var(--paper-2);border-bottom:1px solid var(--line);padding:20px 26px 18px}
+.variant-counsel .card-top h2 {font-size:24px;margin-bottom:5px}
+.variant-counsel .card-top p {margin:0;font-size:14px;color:var(--slate)}
+.variant-counsel .steps {display:flex;gap:6px;margin-top:15px}
+.variant-counsel .steps i {height:4px;flex:1;background:var(--line);border-radius:99px;transition:background .3s}
+.variant-counsel .steps i.on {background:var(--gold)}
+.variant-counsel .card-body {padding:24px 26px 26px}
+.variant-counsel .stepno {font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--slate);margin-bottom:14px}
+.variant-counsel fieldset {border:0;margin:0 0 20px;padding:0}
+.variant-counsel legend {font-weight:600;font-size:15.5px;margin-bottom:11px;padding:0}
+.variant-counsel .opts {display:grid;gap:8px}
+.variant-counsel .opt {display:flex;align-items:center;gap:11px;border:1.5px solid var(--line);border-radius:var(--r);padding:13px 15px;cursor:pointer;font-size:15.5px;transition:border-color .15s,background .15s}
+.variant-counsel .opt:hover {border-color:#B9C4D2;background:var(--paper-2)}
+.variant-counsel .opt input {accent-color:var(--ink);width:17px;height:17px;flex:none;margin:0}
+.variant-counsel .opt input:checked ~ span {font-weight:600}
+.variant-counsel .opt:has(input:checked), .variant-counsel .opt.checked {border-color:var(--ink);background:#F7F9FC}
+.variant-counsel .err {display:none;background:#FCEDEA;border:1px solid #E9BCB2;border-left:3px solid var(--alert);color:#7A2314;font-size:14.5px;line-height:1.45;padding:12px 14px;border-radius:var(--r);margin-bottom:16px}
+.variant-counsel .err.on {display:block}
+.variant-counsel fieldset.invalid .opt {border-color:#E2B3A9}
+.variant-counsel .row {display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.variant-counsel label.fld {display:block;margin-bottom:13px}
+.variant-counsel label.fld span {display:block;font-size:13px;font-weight:600;margin-bottom:6px;color:var(--ink)}
+.variant-counsel input[type=text], .variant-counsel input[type=tel], .variant-counsel input[type=email], .variant-counsel textarea {width:100%;border:1.5px solid var(--line);border-radius:var(--r);padding:12px 14px;font:inherit;font-size:16px;background:#fff;color:var(--ink)}
+.variant-counsel input:focus, .variant-counsel textarea:focus {border-color:var(--ink);outline:none;box-shadow:0 0 0 3px rgba(15,30,54,.1)}
+.variant-counsel textarea {min-height:82px;resize:vertical}
+.variant-counsel .submit {width:100%;border:0;background:var(--gold);color:#20180A;font:inherit;font-weight:700;font-size:17px;padding:16px;border-radius:var(--r);cursor:pointer;letter-spacing:.01em}
+.variant-counsel .submit:hover {filter:brightness(1.07)}
+.variant-counsel .back {background:none;border:0;color:var(--slate);font:inherit;font-size:14px;text-decoration:underline;cursor:pointer;padding:12px 0 0;display:block;margin:0 auto}
+.variant-counsel .consent {display:flex;gap:10px;align-items:flex-start;font-size:11.5px;color:var(--slate);line-height:1.5;margin:4px 0 16px}
+.variant-counsel .consent input {margin-top:2px;flex:none;width:16px;height:16px;accent-color:var(--ink)}
+.variant-counsel .secure {text-align:center;font-size:12px;color:var(--slate);margin:13px 0 0;display:flex;gap:7px;justify-content:center;align-items:center}
+.variant-counsel .hide {display:none}
+
+/* ---------- ledger ---------- */
+.variant-counsel .sec {padding:74px 0}
+.variant-counsel .sec-tint {background:var(--paper-2)}
+.variant-counsel .sec-head {max-width:640px;margin-bottom:38px}
+.variant-counsel .sec-head .eyebrow {color:var(--gold-ink);display:block;margin-bottom:12px}
+.variant-counsel .sec-head h2 {font-size:clamp(28px,3.3vw,40px);margin-bottom:12px}
+.variant-counsel .sec-head p {color:var(--slate);margin:0;font-size:17px}
+.variant-counsel .ledger {border-top:2px solid var(--ink)}
+.variant-counsel .lrow {display:grid;grid-template-columns:200px 1fr;gap:26px;padding:20px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.variant-counsel .amt {font-family:var(--mono);font-weight:700;font-size:26px;letter-spacing:-.03em;color:var(--ink)}
+.variant-counsel .lrow p {margin:0;color:var(--slate);font-size:15.5px}
+.variant-counsel .disc {font-size:12.5px;color:var(--slate);margin-top:18px;font-style:italic}
+
+/* ---------- testimonials ---------- */
+.variant-counsel .testi {display:grid;grid-template-columns:1fr 1.1fr;gap:48px;align-items:center}
+.variant-counsel .testi .sec-head {margin-bottom:0}
+.variant-counsel .testi-disc {font-size:12.5px;color:var(--slate);font-style:italic;margin:16px 0 0;max-width:46ch}
+.variant-counsel .vids {display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.variant-counsel .vid {margin:0;position:relative;aspect-ratio:4/5;background:var(--ink);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.variant-counsel .vid video {width:100%;height:100%;object-fit:cover;display:block;background:var(--ink)}
+.variant-counsel .vid figcaption {position:absolute;left:0;right:0;bottom:0;padding:22px 12px 9px;background:linear-gradient(transparent,rgba(0,0,0,.72));color:#fff;font-size:12px;font-family:var(--mono);letter-spacing:.06em;pointer-events:none}
+
+/* ---------- 72 hours ---------- */
+.variant-counsel .grid3 {display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.variant-counsel .tile {background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:26px 24px}
+.variant-counsel .sec-tint .tile {background:#fff}
+.variant-counsel .tile .num {font-family:var(--mono);font-size:12px;font-weight:700;color:var(--gold-ink);letter-spacing:.1em;margin-bottom:14px}
+.variant-counsel .tile h3 {font-size:21px;margin-bottom:9px}
+.variant-counsel .tile p {margin:0;color:var(--slate);font-size:15.5px}
+
+/* ---------- attorney ---------- */
+.variant-counsel .atty {display:grid;grid-template-columns:280px 1fr;gap:40px;align-items:center}
+.variant-counsel .portrait {position:relative;width:100%;aspect-ratio:4/5;background:var(--paper-2);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.variant-counsel .portrait img {width:100%;height:100%;object-fit:cover;object-position:50% 18%;display:block}
+/* If mumin.png turns out to be a transparent cutout rather than a full-bleed
+photo, swap the two lines above for:
+object-fit:contain;object-position:50% 100%;  (never crops, sits on the tint) */
+.variant-counsel .portrait.noimg {background:var(--ink)}
+.variant-counsel .portrait.noimg::after {content:"PHOTO DID NOT LOAD";position:absolute;inset:0;display:grid;place-items:center;color:#93A6C0;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-align:center;padding:20px}
+.variant-counsel .atty h2 {font-size:32px;margin-bottom:4px}
+.variant-counsel .atty .role {font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-ink);margin:0 0 16px}
+.variant-counsel .atty p {color:var(--slate);margin:0 0 14px}
+
+/* ---------- faq ---------- */
+.variant-counsel .faq {max-width:800px}
+.variant-counsel details {border-bottom:1px solid var(--line)}
+.variant-counsel summary {cursor:pointer;padding:20px 40px 20px 0;font-family:var(--display);font-size:20px;position:relative;list-style:none}
+.variant-counsel summary::-webkit-details-marker {display:none}
+.variant-counsel summary::after {content:"+";position:absolute;right:6px;top:19px;color:var(--gold-ink);font-family:var(--body);font-size:24px;font-weight:300}
+.variant-counsel details[open] summary::after {content:"\2013"}
+.variant-counsel details p {margin:0 0 20px;color:var(--slate);max-width:66ch}
+
+/* ---------- close ---------- */
+.variant-counsel .close {background:var(--ink);color:#fff;text-align:center;padding:78px 0}
+.variant-counsel .close h2 {font-size:clamp(28px,3.6vw,42px);color:#fff;max-width:17ch;margin:0 auto 16px}
+.variant-counsel .close p {color:#C6D0DE;max-width:46ch;margin:0 auto 30px}
+.variant-counsel .ctarow {display:flex;gap:13px;justify-content:center;flex-wrap:wrap}
+.variant-counsel .btn-gold {background:var(--gold);color:#20180A;text-decoration:none;padding:16px 30px;border-radius:var(--r);font-weight:700;display:inline-block}
+.variant-counsel .btn-ghost {border:1.5px solid rgba(255,255,255,.32);color:#fff;text-decoration:none;padding:15px 30px;border-radius:var(--r);font-weight:600;display:inline-block}
+
+/* ---------- footer ---------- */
+.variant-counsel footer {background:#0A1526;color:#8496AE;font-size:13px;padding:40px 0 100px}
+.variant-counsel footer .shell {display:grid;gap:18px}
+.variant-counsel .offices {display:flex;gap:44px;flex-wrap:wrap}
+.variant-counsel .offices b {color:#fff;display:block;font-weight:600;margin-bottom:3px}
+.variant-counsel .offices a {display:inline-block;color:var(--gold);font-family:var(--mono);font-size:15px;font-weight:600;padding:11px 0;min-height:44px;line-height:22px;text-decoration:none;border-bottom:1px solid rgba(200,155,63,.4)}
+.variant-counsel .legal {border-top:1px solid rgba(255,255,255,.1);padding-top:18px;line-height:1.7;font-size:12px}
+.variant-counsel .legal a {color:#B9C6D8;display:inline-block;padding:12px 2px;min-height:44px;line-height:20px}
+
+/* ---------- mobile sticky ---------- */
+.variant-counsel .stickybar {display:none;position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--ink);border-top:1px solid rgba(255,255,255,.14);padding:10px 12px calc(10px + env(safe-area-inset-bottom));gap:10px}
+.variant-counsel .stickybar a {flex:1;text-align:center;text-decoration:none;padding:14px 8px;border-radius:var(--r);font-weight:700;font-size:15.5px}
+.variant-counsel .sb-call {background:var(--gold);color:#20180A}
+.variant-counsel .sb-form {border:1.5px solid rgba(255,255,255,.3);color:#fff}
+.variant-counsel .stickybar a {white-space:nowrap;min-height:48px;display:flex;align-items:center;justify-content:center}
+.variant-counsel .sb-form .sm {display:none}
+
+@media(max-width:940px){
+.variant-counsel {scroll-padding-top:74px}
+.variant-counsel #leadform {scroll-margin-top:74px}
+.variant-counsel .hero .shell {grid-template-columns:1fr;gap:32px;padding-top:34px;padding-bottom:40px}
+.variant-counsel .card {position:static}
+.variant-counsel .atty {grid-template-columns:1fr;gap:24px}
+.variant-counsel .portrait {max-width:210px;justify-self:center}
+.variant-counsel .grid3 {grid-template-columns:1fr}
+.variant-counsel .testi {grid-template-columns:1fr;gap:26px}
+.variant-counsel .vids {grid-template-columns:1fr;gap:14px;max-width:330px;margin:0 auto}
+.variant-counsel .lrow {grid-template-columns:1fr;gap:5px;padding:16px 0}
+.variant-counsel .amt {font-size:23px}
+.variant-counsel .stickybar {display:flex}
+.variant-counsel .sec {padding:50px 0}
+
+/* slim the header so chrome doesn't eat the viewport */
+.variant-counsel header .shell {padding-top:9px;padding-bottom:9px}
+.variant-counsel .brand {font-size:19px;gap:9px}
+.variant-counsel .logo {height:34px}
+.variant-counsel .mark {width:27px;height:35px;font-size:14px}
+.variant-counsel .brand small {font-size:8px;letter-spacing:.14em}
+.variant-counsel header .callbtn {padding:9px 14px;font-size:14px;gap:6px}
+.variant-counsel header .callbtn b {display:none}
+.variant-counsel .strip .shell {gap:14px;padding:7px 16px;font-size:12px}
+.variant-counsel .strip span:nth-child(3) {display:none}
+
+/* clearance so the fixed bar never sits on top of a control */
+.variant-counsel .card-body {padding-bottom:96px}
+.variant-counsel footer {padding-bottom:120px}
+}
+@media(max-width:430px){
+.variant-counsel .hero h1 {font-size:31px}
+.variant-counsel .lede {font-size:17px}
+.variant-counsel .card-top {padding:18px 19px 16px}
+.variant-counsel .card-body {padding:20px 19px 22px}
+.variant-counsel .card-top h2 {font-size:22px}
+.variant-counsel .opt {padding:14px 14px;font-size:16px}
+.variant-counsel .stickybar a {font-size:15px;padding:15px 6px}
+.variant-counsel .offices {gap:26px}
+}
+@media(max-width:400px){
+.variant-counsel header .callbtn {display:none}
+.variant-counsel .row {grid-template-columns:1fr;gap:0}
+.variant-counsel .stickybar {gap:8px;padding-left:10px;padding-right:10px}
+.variant-counsel .stickybar a {font-size:15px;padding:14px 4px}
+.variant-counsel .sb-form .lg {display:none}
+.variant-counsel .sb-form .sm {display:inline}
+.variant-counsel .shell {padding:0 16px}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
