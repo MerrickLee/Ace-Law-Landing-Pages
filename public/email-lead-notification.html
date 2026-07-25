@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>New Lead Notification</title>
+</head>
+<body style="margin:0;padding:0;background:#f4f5f7;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
+
+<!-- Subject Line: 🂡 New Lead — {{inboundWebhookRequest.first_name}} {{inboundWebhookRequest.last_name}} · {{inboundWebhookRequest.market}} ({{inboundWebhookRequest.lp_variant}}) -->
+
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f4f5f7;padding:32px 16px;">
+<tr><td align="center">
+<table role="presentation" width="600" cellpadding="0" cellspacing="0" style="background:#ffffff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.07);">
+
+  <!-- Header -->
+  <tr>
+    <td style="background:#0c1a2e;padding:28px 32px;">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+        <tr>
+          <td style="color:#ffffff;font-size:20px;font-weight:700;letter-spacing:0.5px;">&#9824; ACE LAW</td>
+          <td align="right" style="color:#8496ae;font-size:13px;">Internal Lead Alert</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- Lead badge -->
+  <tr>
+    <td style="padding:28px 32px 0;">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+        <tr>
+          <td>
+            <span style="display:inline-block;background:#e8f5e9;color:#2e7d32;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;text-transform:uppercase;letter-spacing:0.5px;">New Lead</span>
+            <span style="display:inline-block;background:#e3f2fd;color:#1565c0;font-size:12px;font-weight:600;padding:4px 12px;border-radius:20px;margin-left:6px;">{{inboundWebhookRequest.lp_variant}}</span>
+            <span style="display:inline-block;background:#fff3e0;color:#e65100;font-size:12px;font-weight:600;padding:4px 12px;border-radius:20px;margin-left:6px;">{{inboundWebhookRequest.market}}</span>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- Contact name -->
+  <tr>
+    <td style="padding:20px 32px 4px;">
+      <h1 style="margin:0;font-size:26px;font-weight:700;color:#0c1a2e;">{{inboundWebhookRequest.first_name}} {{inboundWebhookRequest.last_name}}</h1>
+    </td>
+  </tr>
+
+  <!-- Phone & Email -->
+  <tr>
+    <td style="padding:0 32px 24px;">
+      <table role="presentation" cellpadding="0" cellspacing="0">
+        <tr>
+          <td style="padding-right:20px;">
+            <a href="tel:{{inboundWebhookRequest.phone}}" style="color:#1565c0;font-size:16px;font-weight:600;text-decoration:none;">&#9742; {{inboundWebhookRequest.phone}}</a>
+          </td>
+          <td>
+            <a href="mailto:{{inboundWebhookRequest.email}}" style="color:#555;font-size:14px;text-decoration:none;">{{inboundWebhookRequest.email}}</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- Divider -->
+  <tr><td style="padding:0 32px;"><hr style="border:none;border-top:1px solid #e8eaed;margin:0;"></td></tr>
+
+  <!-- Case Details -->
+  <tr>
+    <td style="padding:24px 32px 8px;">
+      <h2 style="margin:0;font-size:13px;font-weight:700;color:#8496ae;text-transform:uppercase;letter-spacing:1px;">Case Details</h2>
+    </td>
+  </tr>
+  <tr>
+    <td style="padding:0 32px 24px;">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border:1px solid #e8eaed;border-radius:8px;overflow:hidden;">
+        <tr>
+          <td style="padding:12px 16px;background:#fafbfc;border-bottom:1px solid #e8eaed;width:160px;font-size:13px;font-weight:600;color:#555;">Case Type</td>
+          <td style="padding:12px 16px;border-bottom:1px solid #e8eaed;font-size:14px;color:#0c1a2e;">{{inboundWebhookRequest.case_type}}</td>
+        </tr>
+        <tr>
+          <td style="padding:12px 16px;background:#fafbfc;border-bottom:1px solid #e8eaed;font-size:13px;font-weight:600;color:#555;">Accident Date</td>
+          <td style="padding:12px 16px;border-bottom:1px solid #e8eaed;font-size:14px;color:#0c1a2e;">{{inboundWebhookRequest.accident_date}}</td>
+        </tr>
+        <tr>
+          <td style="padding:12px 16px;background:#fafbfc;border-bottom:1px solid #e8eaed;font-size:13px;font-weight:600;color:#555;">Treatment</td>
+          <td style="padding:12px 16px;border-bottom:1px solid #e8eaed;font-size:14px;color:#0c1a2e;">{{inboundWebhookRequest.treatment}}</td>
+        </tr>
+        <tr>
+          <td style="padding:12px 16px;background:#fafbfc;border-bottom:1px solid #e8eaed;font-size:13px;font-weight:600;color:#555;">Fault</td>
+          <td style="padding:12px 16px;border-bottom:1px solid #e8eaed;font-size:14px;color:#0c1a2e;">{{inboundWebhookRequest.fault}}</td>
+        </tr>
+        <tr>
+          <td style="padding:12px 16px;background:#fafbfc;font-size:13px;font-weight:600;color:#555;">Days to File</td>
+          <td style="padding:12px 16px;font-size:14px;font-weight:700;color:#e65100;">{{inboundWebhookRequest.days_remaining}} days</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- Divider -->
+  <tr><td style="padding:0 32px;"><hr style="border:none;border-top:1px solid #e8eaed;margin:0;"></td></tr>
+
+  <!-- Attribution -->
+  <tr>
+    <td style="padding:24px 32px 8px;">
+      <h2 style="margin:0;font-size:13px;font-weight:700;color:#8496ae;text-transform:uppercase;letter-spacing:1px;">Attribution</h2>
+    </td>
+  </tr>
+  <tr>
+    <td style="padding:0 32px 24px;">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border:1px solid #e8eaed;border-radius:8px;overflow:hidden;">
+        <tr>
+          <td style="padding:10px 16px;background:#fafbfc;border-bottom:1px solid #e8eaed;width:160px;font-size:13px;font-weight:600;color:#555;">Source</td>
+          <td style="padding:10px 16px;border-bottom:1px solid #e8eaed;font-size:14px;color:#0c1a2e;">{{inboundWebhookRequest.utm_source}}</td>
+        </tr>
+        <tr>
+          <td style="padding:10px 16px;background:#fafbfc;border-bottom:1px solid #e8eaed;font-size:13px;font-weight:600;color:#555;">Medium</td>
+          <td style="padding:10px 16px;border-bottom:1px solid #e8eaed;font-size:14px;color:#0c1a2e;">{{inboundWebhookRequest.utm_medium}}</td>
+        </tr>
+        <tr>
+          <td style="padding:10px 16px;background:#fafbfc;border-bottom:1px solid #e8eaed;font-size:13px;font-weight:600;color:#555;">Campaign</td>
+          <td style="padding:10px 16px;border-bottom:1px solid #e8eaed;font-size:14px;color:#0c1a2e;">{{inboundWebhookRequest.utm_campaign}}</td>
+        </tr>
+        <tr>
+          <td style="padding:10px 16px;background:#fafbfc;border-bottom:1px solid #e8eaed;font-size:13px;font-weight:600;color:#555;">Variant</td>
+          <td style="padding:10px 16px;border-bottom:1px solid #e8eaed;font-size:14px;color:#0c1a2e;">{{inboundWebhookRequest.lp_variant}}</td>
+        </tr>
+        <tr>
+          <td style="padding:10px 16px;background:#fafbfc;border-bottom:1px solid #e8eaed;font-size:13px;font-weight:600;color:#555;">Experiment</td>
+          <td style="padding:10px 16px;border-bottom:1px solid #e8eaed;font-size:14px;color:#0c1a2e;">{{inboundWebhookRequest.experiment_id}}</td>
+        </tr>
+        <tr>
+          <td style="padding:10px 16px;background:#fafbfc;font-size:13px;font-weight:600;color:#555;">Landing Page</td>
+          <td style="padding:10px 16px;font-size:12px;color:#1565c0;word-break:break-all;">{{inboundWebhookRequest.landing_page}}</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- CTA -->
+  <tr>
+    <td style="padding:0 32px 32px;" align="center">
+      <a href="tel:{{inboundWebhookRequest.phone}}" style="display:inline-block;background:#0c1a2e;color:#ffffff;font-size:15px;font-weight:700;padding:14px 36px;border-radius:8px;text-decoration:none;letter-spacing:0.3px;">Call {{inboundWebhookRequest.first_name}} Now</a>
+    </td>
+  </tr>
+
+  <!-- Footer -->
+  <tr>
+    <td style="background:#f4f5f7;padding:20px 32px;border-top:1px solid #e8eaed;">
+      <p style="margin:0;font-size:12px;color:#999;text-align:center;">This is an automated internal notification from ACE Law Landing Pages.<br>Submitted at {{inboundWebhookRequest.started_at}}</p>
+    </td>
+  </tr>
+
+</table>
+</td></tr>
+</table>
+
+</body>
+</html>
