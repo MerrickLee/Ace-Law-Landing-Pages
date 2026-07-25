@@ -37,7 +37,9 @@ export default function LeadForm({ data, market, variant }: { data: MarketData, 
     
     newUtms['landing_page'] = window.location.href;
     newUtms['referrer'] = document.referrer;
+    newUtms['started_at'] = Date.now().toString();
     
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setUtms(newUtms);
     pushEvent('lp_view');
   }, []);
@@ -161,7 +163,7 @@ export default function LeadForm({ data, market, variant }: { data: MarketData, 
       <input type="hidden" name="market" id="market" value={market} />
       {/* Honeypot field for spam */}
       <input type="text" name="hp_field" style={{display: "none"}} tabIndex={-1} autoComplete="off" />
-      <input type="hidden" name="started_at" value={Date.now()} />
+      {utms.started_at && <input type="hidden" name="started_at" value={utms.started_at} />}
 
       <div id="step1" className={step === 1 ? "" : "hide"}>
         <div className="stepno">Step 1 of 2</div>

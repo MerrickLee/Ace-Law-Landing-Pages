@@ -39,7 +39,9 @@ export default function CaseCheckQuiz({ data, market, variant }: { data: MarketD
     
     newUtms['landing_page'] = window.location.href;
     newUtms['referrer'] = document.referrer;
+    newUtms['started_at'] = Date.now().toString();
     
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setUtms(newUtms);
     pushEvent('lp_view');
   }, []);
@@ -194,6 +196,7 @@ export default function CaseCheckQuiz({ data, market, variant }: { data: MarketD
           <input type="hidden" name="market" id="market" value={market} />
           {/* Honeypot field for spam */}
           <input type="text" name="hp_field" style={{display: "none"}} tabIndex={-1} autoComplete="off" />
+          {utms.started_at && <input type="hidden" name="started_at" value={utms.started_at} />}
 
           {/* Q1 */}
           <div className={`qstep ${step === 1 ? '' : 'hide'}`} data-step="1">

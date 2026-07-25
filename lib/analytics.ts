@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 export function pushEvent(eventName: string, extra?: Record<string, any>) {
   if (typeof window !== "undefined") {
     const dataLayer = (window as any).dataLayer = (window as any).dataLayer || [];

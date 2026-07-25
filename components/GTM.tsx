@@ -16,10 +16,9 @@ function GTMAnalytics() {
     const search = searchParams.toString();
     const url = pathname + (search ? `?${search}` : '');
     
-    // Send a pageview event to GTM on route changes
-    // @ts-ignore
+    // @ts-expect-error - dataLayer is not natively typed
     if (typeof window !== 'undefined' && window.dataLayer) {
-      // @ts-ignore
+      // @ts-expect-error - dataLayer is not natively typed
       window.dataLayer.push({
         event: 'pageview',
         page_path: url,
