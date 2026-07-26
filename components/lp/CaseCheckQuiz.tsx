@@ -126,6 +126,15 @@ export default function CaseCheckQuiz({ data, market, variant }: { data: MarketD
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body)
       });
+      
+      // Push event to GTM dataLayer
+      if (typeof window !== "undefined" && (window as any).dataLayer) {
+        (window as any).dataLayer.push({
+          event: "generate_lead",
+          lead_type: "case-check",
+          market: market,
+        });
+      }
     } catch (err) {
       console.error(err);
     }

@@ -121,7 +121,6 @@ export default function LeadForm({ data, market, variant }: { data: MarketData, 
     
     // Push event before fetch so analytics trigger immediately
     pushEvent('generate_lead', { value: 1, currency: 'USD' });
-    setSubmitted(true);
     scrollToForm();
 
     try {
@@ -130,6 +129,17 @@ export default function LeadForm({ data, market, variant }: { data: MarketData, 
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body)
       });
+
+      // Push event to GTM dataLayer
+      if (typeof window !== "undefined" && (window as any).dataLayer) {
+        (window as any).dataLayer.push({
+          event: "generate_lead",
+          lead_type: "counsel",
+          market: market,
+        });
+      }
+
+      setSubmitted(true);
     } catch (err) {
       console.error(err);
     }
