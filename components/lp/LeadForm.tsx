@@ -119,8 +119,6 @@ export default function LeadForm({ data, market, variant }: { data: MarketData, 
     // Convert to JSON and send to API route
     const body = Object.fromEntries(formData.entries());
     
-    // Push event before fetch so analytics trigger immediately
-    pushEvent('generate_lead', { value: 1, currency: 'USD' });
     scrollToForm();
 
     try {
@@ -130,11 +128,15 @@ export default function LeadForm({ data, market, variant }: { data: MarketData, 
         body: JSON.stringify(body)
       });
 
-      // Push event to GTM dataLayer
-      if (typeof window !== "undefined" && (window as any).dataLayer) {
+      // Fire analytics only after a successful submission
+      pushEvent('generate_lead', { value: 1, currency: 'USD' });
+
+      // Push required event to GTM dataLayer
+      if (typeof window !== "undefined") {
+        (window as any).dataLayer = (window as any).dataLayer || [];
         (window as any).dataLayer.push({
           event: "generate_lead",
-          lead_type: "counsel",
+          lead_type: "car_accident",
           market: market,
         });
       }

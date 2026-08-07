@@ -114,11 +114,6 @@ export default function CaseCheckQuiz({ data, market, variant }: { data: MarketD
     formData.append('days_remaining', answers.daysRemaining.toString());
     
     const body = Object.fromEntries(formData.entries());
-    
-    // Push event before fetch so analytics trigger immediately
-    pushEvent('generate_lead', { case_type: answers.caseType || '', value: 1, currency: 'USD' });
-    setSubmitted(true);
-    showStep(6);
 
     try {
       await fetch("/api/lead", {
@@ -127,17 +122,24 @@ export default function CaseCheckQuiz({ data, market, variant }: { data: MarketD
         body: JSON.stringify(body)
       });
       
-      // Push event to GTM dataLayer
-      if (typeof window !== "undefined" && (window as any).dataLayer) {
+      // Fire analytics only after a successful submission
+      pushEvent('generate_lead', { case_type: answers.caseType || '', value: 1, currency: 'USD' });
+
+      // Push required event to GTM dataLayer
+      if (typeof window !== "undefined") {
+        (window as any).dataLayer = (window as any).dataLayer || [];
         (window as any).dataLayer.push({
           event: "generate_lead",
-          lead_type: "case-check",
+          lead_type: "car_accident",
           market: market,
         });
       }
     } catch (err) {
       console.error(err);
     }
+
+    setSubmitted(true);
+    showStep(6);
   };
 
   // Build readout for step 5
